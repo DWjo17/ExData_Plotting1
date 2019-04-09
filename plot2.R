@@ -9,9 +9,6 @@ cousera2 <- subset(cousera1, Date == "2007-02-01" | Date =="2007-02-02")
 
 dim(cousera2)
 
-timedate <- strptime(paste(cousera2$Date, cousera2$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
-head(timedate)
-
 cousera3 <-cbind(cousera2, "timedate" = as.POSIXct(paste(cousera2$Date, cousera2$Time)))
 head(cousera3)
 #       Date        Time                Global_active_power Global_reactive_power       Voltage         Global_intensity Sub_metering_1
